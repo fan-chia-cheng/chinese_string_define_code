@@ -35,7 +35,7 @@ TypeError                                 Traceback (most recent call last)
     220 
 
 TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
-
+#3-2Bpandas_to_SQL(暫停Dtype指令)@+MDL1350009_大1_1131105
 
 
 
