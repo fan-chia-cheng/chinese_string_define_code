@@ -15,6 +15,30 @@ P_data 是原始EXCEL，需要注意資料類型，新增欄位21(U為'合併')�
 
 檔案名稱3-1，原始檔案背景格式已被覆蓋，+MDL1350009_大1_1131105.xlsx為臨時格式，執行時有ERROR。
 檔案名稱3-2，原始檔案背景格式，請參考MDL1350005(從A欄).xls。
+尋找舊檔案匯入也是有問題:
+P_data.dtypes
+Q_data.dtypes
+ERROR CODE
+TypeError                                 Traceback (most recent call last)
+/usr/local/lib/python3.10/dist-packages/IPython/core/formatters.py in __call__(self, obj)
+    339                 pass
+    340             else:
+--> 341                 return printer(obj)
+    342             # Finally look for special method names
+    343             method = get_real_method(obj, self.print_method)
+
+/usr/local/lib/python3.10/dist-packages/google/colab/_reprs.py in _pandas_series_to_html(series)
+    216     """Renders a pandas Series as a DataFrame HTML table with a dtype label."""
+    217     series_as_table_html = series.to_frame()._repr_html_()  # pylint: disable=protected-access
+--> 218     series_as_table_html += f'<br><label><b>dtype:</b> {series.dtype}</label>'
+    219     return series_as_table_html
+    220 
+
+TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+
+
+
+
 檔案名稱3-3，原始檔案背景格式，請參考MDL1350005(從A欄).xls。
 檔案名稱3-4，原始檔案背景格式，MDL1350003_詢價單_#5_0518(密).xls
 檔案名稱3-4，可使用在##STEP1。
